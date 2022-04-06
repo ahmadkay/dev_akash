@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Verdana, sans-serif;
+        }
+        
+        .mySlides {
+            display: none;
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+        /* Slideshow container */
+        
+        .slideshow-container {
+            max-width: 500px;
+            position: relative;
+            margin: auto;
+        }
+        /* Caption text */
+        
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        /* The dots/bullets/indicators */
+        
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active {
+            background-color: #717171;
+        }
+        /* Fading animation */
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        /* Style the navbar */
+        
+        #navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+        /* Navbar links */
+        
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+        /* Page content */
+        
+        .content {
+            padding: 16px;
+        }
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+        
+        .sticky+.content {
+            padding-top: 60px;
+        }
+        
+        {
+            box-sizing: border-box;
+        }
+        
+        .main {
+            max-width: 1000px;
+            margin: auto;
+        }
+        
+        .column {
+            float: left;
+            width: 25%;
+            padding: 5px;
+        }
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+            margin: 8px -16px;
+        }
+        
+        .row,
+        .row>.column {
+            padding: 8px
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .content {
+            background-color: #EDA800;
+            padding: 10px;
+        }
+        
+        @media screen and (max-width: 900px) {
+            .column {
+                width: 50%
+            }
+        }
+        
+        h1 {
+            font-style: italic;
+            text-align: center;
+            background-color: green;
+            border: groove;
+        }
+        
+        h2 {
+            text-align: center;
+            font-style: italic;
+            color: red;
+        }
+        
+        img {
+            border-radius: 50%;
+        }
+    </style>
+    <title>HOME PAGE</title>
+</head>
+
+<body>
+
+    <!-- html nav bar -->
+    <div id="navbar">
+        <a href="about.html">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+        <a href="index.html">EXIT</a>
+    </div>
+    <!-- html slide_show code -->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade" align="center">
+            <img src="images/icecream.jpg" style="width:100%" height="180">
+        </div>
+
+        <div class="mySlides fade" align="center">
+            <img src="images/fruit.jpg" style="width:100%" height="180">
+        </div>
+
+        <div class="mySlides fade" align="center">
+            <img src="images/super.png" style="width:100%" height="180">
+        </div>
+
+        <div class="mySlides fade" align="center">
+            <img src="images/chocolate.jpg" style="width:100%" height="180">
+        </div>
+
+        <div class="mySlides fade" align="center">
+            <img src="images/yogurt.jpg" style="width:100%" height="180">
+        </div>
+    </div><br>
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+
+    <h2>Welcome To The Golden Online Supermarket</h2>
+    <hr>
+
+    <!-- items code -->
+    <div class="row">
+        <div class="column">
+            <div class="content">
+                <p align="center">
+                    <a href="snacks.html"> <img border="4" alt="Snacks" src="images/snack.jpg" width="200" height="200"></p><br>
+                <p align="center"><button type="button" class="block">SNACKS</button></p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <p align="center">
+                    <a href="chocolate.html"> <img border="4" alt="chocolate" src="images/chocolate.jpg" width="200" height="200"></p><br>
+                <p align="center"><button type="button" class="block">CHOCOLATES</button></p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <p align="center">
+                    <a href="icecream.html"> <img border="4" alt="icecream" src="images/icecream.jpg" width="200" height="200"></p><br>
+                <p align="center"><button type="button" class="block">ICE-CREAMS</button></p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <p align="center">
+                    <a href="softdrinks.html"> <img border="4" alt="softdrinks" src="images/drinks.jpg" width="200" height="200"></p><br>
+                <p align="center"><button type="button" class="block">SOFT DRINKS</button></p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <p align="center">
+                    <a href="yogurt.html"> <img border="4" alt="yogurt" src="images/yogurt.jpg" width="200" height="200"></p><br>
+                <p align="center"><button type="button" class="block">YOGURTS</button></p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <p align="center">
+                    <a href="cakes.html"> <img border="4" alt="cakes" src="images/cake.jpg" width="200" height="200"></p><br>
+                <p align="center"><button type="button" class="block">CAKES</button></p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <p align="center">
+                    <a href="fruit.html"> <img border="4" alt="fruit" src="images/fruit.jpg" width="200" height="200"></p><br>
+                <p align="center"><button type="button" class="block">FRUITS</button></p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <p align="center">
+                    <a href="bread.html"> <img border="4" alt="bread" src="images/bread.jpg" width="200" height="200"></p><br>
+                <p align="center"><button type="button" class="block">BREADS</button></p>
+            </div>
+        </div>
+    </div>
+    <!-- this is a script on image slide //-->
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        // this is a script on nav. bar //-->
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
