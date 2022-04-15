@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        body {
+            background-color: blue;
+        }
+        
+        .drop {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            background: #54ABFB;
+            border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+            opacity: 0.8;
+            border: 2px solid #3D93FF;
+        }
+        
+        .drop::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: #318CFE;
+            border-radius: 54% 49% 48% 52% / 62% 44% 56% 38%;
+            box-shadow: -20px 30px 16px #1B6CFB, -40px 60px 32px #1B6CFB, inset -6px 6px 10px #1B6CFB, inset 2px 6px 10px #1A74E5, inset 20px -20px 22px white, inset 40px -40px 44px #A8CEFF;
+        }
+        
+        .drop::after {
+            content: "";
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            background: #E6FDFB;
+            border-radius: 44% 56% 46% 54% / 36% 50% 50% 64%;
+            left: 130px;
+            top: 40px;
+            box-shadow: 16px 40px 0 -10px white;
+            opacity: 0.8;
+        }
+        
+        .tile {
+            position: absolute;
+            height: 80px;
+            width: 60px;
+            background: #C0D6FF;
+            transform-origin: top;
+            top: 40px;
+            left: 500px;
+            transform: skewY(30deg);
+            display: flex;
+            justify-content: center;
+            place-items: center;
+            font-size: 26px;
+        }
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <div class="drop"></div>
+    <p>some plain old html</p>
+    <p>
+        <?php
+		// outputs hi everybody to standard output --
+		usually a browser
+		echo "hi everybody.";
+		// assigns the sum of 2 and 2 to the variable $sum
+		$sum=2+2
+		// you can probably guess the output of: 
+		echo "2+2 is $sum"
+		?>
+    </p>
+    <p>more plain old html</p>
+    <script type="text/javascript">
+        //display the alart box
+        var your_name = prompt('please enter your name')
+            //end hide-->
+    </script>
+
+</body>
+
+</html>
