@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=poppins:wght@900&display=swap');
+        .container {
+            position: absolute;
+            height: 500px;
+            width: 1500px;
+            background: linear-gradient(60deg, rgba(33, 41, 116, 1) 0%, rgba(44, 55, 160, 1) 35%, rgba(44, 55, 160, 1) 65%, rgba(33, 41, 116, 1) 100%);
+            background: rgb(42, 52, 150);
+            /*background: #FAB501; */
+            perspective: 500px;
+            font-family: 'poppins', sans-serif;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: "";
+            position: absolute;
+            height: 1000px;
+            width: 1000px;
+            background: #11045A;
+            border-radius: 50%;
+            bottom: 100px;
+            left: -100px;
+            box-shadow: -70px -200px 0 200px #0C1941;
+        }
+        
+        .container::after {
+            content: "";
+            position: absolute;
+            height: 1000px;
+            width: 1000px;
+            background: #11045A;
+            border-radius: 50%;
+            top: 100px;
+            right: -300px;
+            z-index: -10;
+            box-shadow: 70px 200px 0 200px #0C1941;
+        }
+        
+        .s {
+            height: 200px;
+            width: 700px;
+            position: absolute;
+            background: #11045A;
+            left: 600px;
+            top: -128px;
+            transform: rotate(-45deg);
+            box-shadow: -490px 296px #11045A;
+        }
+        
+        .laptop {
+            position: absolute;
+            background: linear-gradient(to bottom left, #4015C7, #CA6DA2);
+            background: #C0D6FF;
+            width: 200px;
+            height: 80px;
+            left: 50%;
+            top: 62%;
+            transform-origin: center;
+            transform: translate(-50%, -50%) skew(-62deg, 26deg);
+        }
+        
+        .laptop::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: #4FF6FB;
+            bottom: -4Px right: -4px;
+            transform: skew(60deg);
+        }
+        
+        .laptop::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 7px;
+            background: #4FF6FB;
+            right: -7px;
+            bottom: -1.5px;
+            transform: skewY(30deg);
+        }
+        
+        .pad {
+            position: absolute;
+            background: #A6B9E1;
+            height: 24px;
+            width: 60px left: 50%;
+            transform: translateX(-50%);
+            bottom: 4px border-radius: 4px;
+            box-sizing: border-box;
+            border: 2px solid #19096C;
+            border-top: 1px solid #19096C;
+            border-bottom: 1px solid #19096C;
+        }
+        
+        .key {
+            position: absolute;
+            height: 4px;
+            width: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20px;
+            background: #19096C;
+            box-shadow: 0 6px #19096C, 0 12px #19096C, 0 18px #19096C, 0 -5px 0 -1px #19096C;
+        }
+        
+        .laptop-border {
+            position: absolute;
+            left: 50%;
+            top: 72%;
+            border-radius: 6px;
+            transform-origin: center;
+            transform: translate(-50% -50%) skew(-62deg, 36deg);
+            width: 220px;
+            height: 94px;
+            border: 4px solid #4FFBFE;
+            border-bottom: 3px solid #4FFBFE;
+            border-top: 3px solid #4FFBFE;
+        }
+        
+        .laptop-border::after {
+            content: "";
+            position: absolute;
+            left: -300px;
+            /*top: -10px;*/
+            bottom: 10px;
+            border-radius: 6px;
+            transform-origin: center;
+            /*transform: translate(-50%, -50%,) skew(-62deg, 36deg);*/
+            width: 220px;
+            height: 94px;
+            border: 4px solid #4FFBFE;
+            border-bottom: 3px solid #4FFBFE;
+            border-top: 3px solid #4FFBFE;
+        }
+        
+        .screen {
+            position: absolute;
+            background: linear-gradient(to bottom left, #4015C7, #CA6DA2);
+            background: #212974;
+            width: 200px;
+            height: 198px;
+            transform-origin: top;
+            top: 0;
+            transform: skew(58deg, 0deg) rotateX(116deg);
+            border-radius: 0 0 10px 10px;
+            box-shadow: 2px 2px 0 #4FFBFE;
+        }
+        
+        .screen::before {
+            position: absolute;
+            content: "";
+            background: #2C37A0;
+            width: 186px;
+            height: 182px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .screen::after {
+            position: absolute;
+            content: "";
+            font-size: 26px;
+            background: #56169D;
+            color: white;
+            width: 100px;
+            height: 80px;
+            left: 45%;
+            top: 45%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            place-items: center;
+            box-shadow: 20px 20px 0 #11045A;
+            border-bottom: 2px solid white;
+            border-right: 2px solid white;
+        }
+        
+        .code {
+            position: absolute;
+            height: 6px;
+            width: 16px;
+            background: #F7359E;
+            top: 110px;
+            left: 52px;
+            z-index: 100;
+            box-shadow: 20px 0 0 white 40px 0 white, 60px 0 0 -1px #E69661, 0 -8px white, 10px -16px #E79858, 28px -16px #FA339A, 10px -24 white, 28px -24px #E79858, 10px -32px #FA339A, 28px -32px white, 0 -40px white, 0 -48px #F7359E, 20px -48px white, 40px -48px white, 60px -48px 0 -1px #E69661;
+        }
+        
+        .tile {
+            position: absolute;
+            height: 80px;
+            width: 60px;
+            background: #C0D6FF;
+            transform-origin: top;
+            top: 40px;
+            left: 500px;
+            transform: skewY(30deg);
+            display: flex;
+            justify-content: center;
+            place-items: center;
+            font-size: 26px;
+        }
+        
+        .tile::after {
+            content: "";
+            position: absolute;
+            background: #698CFF;
+            width: 106%;
+            height: 12px;
+            transform: skew(-45deg);
+            left: 6px;
+            top: -12px;
+        }
+        
+        .tile::before {
+            content: "";
+            position: absolute;
+            background: #698CFF;
+            width: 15px;
+            height: 100%;
+            transform: skewY(-42deg);
+            right: -15px;
+            bottom: 6px;
+        }
+        
+        .tile-2 {
+            left: 1120px;
+            top: 300px;
+            font-size: 22px;
+        }
+        
+        .tile-3 {
+            left: 950px;
+            top: 30px;
+        }
+    </style>
+    <title>header</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="s"></div>
+        <div class="laptop-border"></div>
+        <div class="laptop">
+            <div class="!pad"></div>
+            <div class="key"></div>
+            <div class="screen">
+                <div class="code"></div>
+            </div>
+        </div>
+        <div class="tile">
+            CSS
+        </div>
+        <div class="tile tile-2">
+            HTML
+        </div>
+        <div class="tile tile-3">
+            < />
+        </div>
+    </div>
+
+</body>
+
+</html>
